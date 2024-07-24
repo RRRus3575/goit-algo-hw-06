@@ -54,7 +54,7 @@ def bfs_path(graph, start, goal):
                 queue.append((next, path + [next]))
     return None
 
-# Використання функцій для пошуку шляху від Station A до Station D
+
 dfs_result = dfs_path(G, "Station 1", "Station 17")
 bfs_result = bfs_path(G, "Station 1", "Station 17")
 
