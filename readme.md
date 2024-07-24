@@ -1,18 +1,18 @@
 ### Результати
 
 - **DFS (пошук в глибину)**:
-  - Шлях від "Station 1" до "Station 17": `['Station 1', 'Station 3', 'Station 6', 'Station 4', 'Station 2', 'Station 5', 'Station 7', 'Station 8', 'Station 9', 'Station 10', 'Station 11', 'Station 12', 'Station 13', 'Station 14', 'Station 15', 'Station 17']`
+  - Шлях від "Akademmistechko" до "Teremky": `['Akademmistechko', 'Zhytomyrska', 'Sviatoshyn', 'Nyvky', 'Beresteiska', 'Shuliavska', 'Politekhnichnyi Instytut', 'Vokzalna', 'Universytet', 'Teatralna', 'Zoloti Vorota', 'Palats Sportu', 'Klovska', 'Pecherska', 'Druzhby Narodiv', 'Vydubychi', 'Slavutych', 'Osokorky', 'Pozniaky', 'Kharkivska', 'Vyrlytsia', 'Boryspilska', 'Chervony Khutir']`
 - **BFS (пошук в ширину)**:
-  - Шлях від "Station 1" до "Station 17": `['Station 1', 'Station 3', 'Station 5', 'Station 7', 'Station 9', 'Station 11', 'Station 13', 'Station 15', 'Station 17']`
+  - Шлях від "Akademmistechko" до "Teremky: `['Akademmistechko', 'Zhytomyrska', 'Sviatoshyn', 'Nyvky', 'Beresteiska', 'Shuliavska', 'Politekhnichnyi Instytut', 'Vokzalna', 'Universytet', 'Teatralna', 'Zoloti Vorota', 'Palats Sportu', 'Klovska', 'Pecherska', 'Druzhby Narodiv', 'Vydubychi', 'Slavutych', 'Osokorky', 'Pozniaky', 'Kharkivska', 'Vyrlytsia', 'Boryspilska', 'Chervony Khutir', 'Boryspilska', 'Kharkivska', 'Pozniaky', 'Osokorky', 'Slavutych', 'Vydubychi', 'Druzhby Narodiv', 'Pecherska', 'Klovska', 'Palats Sportu', 'Zoloti Vorota', 'Teatralna', 'Universytet', 'Vokzalna', 'Politekhnichnyi Instytut', 'Shuliavska', 'Beresteiska', 'Nyvky', 'Sviatoshyn', 'Zhytomyrska', 'Akademmistechko']`
 
 ### Порівняння результатів
 
 - **DFS (пошук в глибину)**:
   - Алгоритм DFS знаходить шлях, йдучи в глибину по кожному маршруту до кінцевої станції. Він обирає перший знайдений шлях, який може бути довшим за кількістю кроків.
-  - **Результат**: `['Station 1', 'Station 3', 'Station 6', 'Station 4', 'Station 2', 'Station 5', 'Station 7', 'Station 8', 'Station 9', 'Station 10', 'Station 11', 'Station 12', 'Station 13', 'Station 14', 'Station 15', 'Station 17']`
+  - **Результат**: `['Akademmistechko', 'Zhytomyrska', 'Sviatoshyn', 'Nyvky', 'Beresteiska', 'Shuliavska', 'Politekhnichnyi Instytut', 'Vokzalna', 'Universytet', 'Teatralna', 'Zoloti Vorota', 'Palats Sportu', 'Klovska', 'Pecherska', 'Druzhby Narodiv', 'Vydubychi', 'Slavutych', 'Osokorky', 'Pozniaky', 'Kharkivska', 'Vyrlytsia', 'Boryspilska', 'Chervony Khutir']`
 - **BFS (пошук в ширину)**:
   - Алгоритм BFS знаходить шлях, проходячи всі сусідні вершини на поточному рівні перед переходом на наступний рівень. Він забезпечує найкоротший шлях за кількістю кроків.
-  - **Результат**: `['Station 1', 'Station 3', 'Station 5', 'Station 7', 'Station 9', 'Station 11', 'Station 13', 'Station 15', 'Station 17']`
+  - **Результат**: `['Akademmistechko', 'Zhytomyrska', 'Sviatoshyn', 'Nyvky', 'Beresteiska', 'Shuliavska', 'Politekhnichnyi Instytut', 'Vokzalna', 'Universytet', 'Teatralna', 'Zoloti Vorota', 'Palats Sportu', 'Klovska', 'Pecherska', 'Druzhby Narodiv', 'Vydubychi', 'Slavutych', 'Osokorky', 'Pozniaky', 'Kharkivska', 'Vyrlytsia', 'Boryspilska', 'Chervony Khutir']`
 
 ### Висновки
 
