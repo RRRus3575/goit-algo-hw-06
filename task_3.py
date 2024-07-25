@@ -51,6 +51,7 @@ routes = [
 ]
 G.add_weighted_edges_from(routes)
 
+
 def dijkstra(graph, start):
     distances = {node: float('inf') for node in graph.nodes}
     distances[start] = 0
@@ -80,6 +81,7 @@ def dijkstra(graph, start):
 
     return distances, previous_nodes
 
+
 def shortest_path(graph, start, end):
     distances, previous_nodes = dijkstra(graph, start)
     path = []
@@ -90,6 +92,7 @@ def shortest_path(graph, start, end):
     path = path[::-1]
     return path, distances[end]
 
+
 def dijkstra_all_paths(graph):
     paths = {}
     for node in graph.nodes:
@@ -99,6 +102,8 @@ def dijkstra_all_paths(graph):
                 path, weight = shortest_path(graph, node, target)
                 paths[node][target] = (path, weight)
     return paths
+
+
 
 all_shortest_paths = dijkstra_all_paths(G)
 
