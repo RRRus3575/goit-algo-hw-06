@@ -51,18 +51,53 @@ routes = [
 ]
 G.add_weighted_edges_from(routes)
 
+def dijkstra(graph, start):
+    distances = {node: float('inf') for node in graph.nodes}
+    distances[start] = 0
+    previous_nodes = {node: None for node in graph.nodes}
+    nodes = set(graph.nodes)
+    
+    while nodes:
+        min_node = None
+        for node in nodes:
+            if min_node is None:
+                min_node = node
+            elif distances[node] < distances[min_node]:
+                min_node = node
+        
+        if distances[min_node] == float('inf'):
+            break
+
+        nodes.remove(min_node)
+        current_distance = distances[min_node]
+
+        for neighbor, attributes in graph[min_node].items():
+            weight = attributes['weight']
+            distance = current_distance + weight
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                previous_nodes[neighbor] = min_node
+
+    return distances, previous_nodes
+
+def shortest_path(graph, start, end):
+    distances, previous_nodes = dijkstra(graph, start)
+    path = []
+    current_node = end
+    while current_node is not None:
+        path.append(current_node)
+        current_node = previous_nodes[current_node]
+    path = path[::-1]
+    return path, distances[end]
+
 def dijkstra_all_paths(graph):
     paths = {}
     for node in graph.nodes:
         paths[node] = {}
         for target in graph.nodes:
             if node != target:
-                try:
-                    path = nx.dijkstra_path(graph, node, target)
-                    weight = nx.dijkstra_path_length(graph, node, target)
-                    paths[node][target] = (path, weight)
-                except nx.NetworkXNoPath:
-                    paths[node][target] = (None, float('inf'))
+                path, weight = shortest_path(graph, node, target)
+                paths[node][target] = (path, weight)
     return paths
 
 all_shortest_paths = dijkstra_all_paths(G)
